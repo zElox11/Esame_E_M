@@ -11,7 +11,7 @@ void ContoCorrente::aggiungiTransazione(const std::string& tipo, double importo)
         std::cout << "Saldo insufficiente!" << std::endl;
         return;
     }
-    transazioni.emplace_back(tipo, importo);
+    transazioni.emplace_back(tipo, importo); //inserisci un nuovo elemento alla fine del vettore, in questo caso un valore di una transazione
     saldo += (tipo == "Entrata" ? importo : -importo);  //operatore ternario
 }
 
